@@ -24,7 +24,6 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "clean": "rm -rf dist",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
