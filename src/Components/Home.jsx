@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Link, animateScroll as scroll } from "react-scroll";
-import ProfilePicture from "../asset/profile.jpg";
+import ProfilePicture from "../asset/profile.JPG";
 
 const Home = () => {
   useEffect(() => {
