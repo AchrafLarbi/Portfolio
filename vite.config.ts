@@ -3,7 +3,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: '/Portfolio/',
+  base: 'https://AchrafLarbi.github.io/Portfolio/',
   plugins: [
     react(),
   ],
