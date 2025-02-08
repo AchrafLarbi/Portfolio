@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+"use client";
+
+import { useEffect, useState } from "react";
 import data from "../data/portfolioData";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -24,68 +26,55 @@ const Work2 = () => {
   };
 
   return (
-    <section>
-      <div
-        name="work"
-        className="w-full md:h-screen text-gray-300 bg-[#0a192f] font-sans pt-32" // Add padding to top and bottom
-      >
-        <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-          <div className="pb-8">
-            <p className="text-4xl font-bold inline border-b-4 border-[#C23B22] text-gray-300">
-              Work
-            </p>
-            <p className="py-6">Checkout My Work</p>
-          </div>
+    <section
+      id="work"
+      className="w-full py-20 bg-[#0a192f] text-gray-300 font-sans"
+    >
+      <div className="max-w-[1000px] mx-auto px-4">
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 pb-2 inline-block border-b-4 border-[#C23B22]">
+          Work
+        </h2>
+        <p className="mb-8">Check out My Work</p>
 
-          <div className="w-full h-full grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {portfolios
-              .slice(0, nextItems)
-              .map((portfolio, index) => (
-                <div
-                  className="group flex justify-center items-center mx-auto relative z-[1]"
-                  key={index}
-                  data-aos="fade-zoom-in"
-                  data-aos-delay="50"
-                  data-aos-duration="1000"
-                >
-                  <figure>
-                    <img
-                      className="rounded-[8px]"
-                      src={portfolio.imgUrl}
-                      alt="figure"
-                    />
-                  </figure>
-
-                  <div className="w-full h-full bg-[#0a192f] backdrop-filter backdrop-blur-sm bg-opacity-30 rounded-[8px] absolute top-0 left-0 z-[5] hidden group-hover:block cursor-pointer">
-                    <div className="w-full h-full flex items-center justify-center">
-                      <button
-                        onClick={() => handleShowCard(portfolio.id)}
-                        className="text-white bg-[#0a192f] hover:bg-[#53565a] py-2 px-4 rounded-[8px] font-500 ease-in duration-200"
-                      >
-                        See details
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ))
-              .reverse()}
-          </div>
-          <div className="container w-full h-full">
-            <div className="text-center my-8">
-              {nextItems < portfolios.length && portfolios.length > 6 && (
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {portfolios.slice(0, nextItems).map((portfolio, index) => (
+            <div
+              key={index}
+              className="group relative overflow-hidden rounded-lg"
+              data-aos="fade-zoom-in"
+              data-aos-delay="50"
+              data-aos-duration="1000"
+            >
+              <img
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                src={portfolio.imgUrl || "/placeholder.svg"}
+                alt={portfolio.title}
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-75 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <button
-                  onClick={handleLoadMore}
-                  className="text-white mt-8 bg-[#0a192f] hover:bg-[#53565a] py-2 px-4 rounded-[8px] font-500 ease-in duration-200"
+                  onClick={() => handleShowCard(portfolio.id)}
+                  className="bg-[#C23B22] text-white py-2 px-4 rounded-lg hover:bg-[#9c2f1b] transition-colors duration-300"
                 >
-                  Load More
+                  See details
                 </button>
-              )}
+              </div>
             </div>
-          </div>
+          ))}
         </div>
 
-        {showCard && <ShowCard setShowCard={setShowCard} activeId={activeId} />}
+        {nextItems < portfolios.length && portfolios.length > 6 && (
+          <div className="text-center mt-8">
+            <button
+              onClick={handleLoadMore}
+              className="bg-[#C23B22] text-white py-2 px-6 rounded-lg hover:bg-[#9c2f1b] transition-colors duration-300"
+            >
+              Load More
+            </button>
+          </div>
+        )}
       </div>
+
+      {showCard && <ShowCard setShowCard={setShowCard} activeId={activeId} />}
     </section>
   );
 };

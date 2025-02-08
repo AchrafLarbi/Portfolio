@@ -2,6 +2,8 @@ import portfolioWork01 from "../asset/test/esicheck.png";
 import portfolioWork02 from "../asset/test/stock.png";
 import portfolioWork03 from "../asset/test/pizza3.PNG";
 import portfolioWork04 from "../asset/test/studenty.png";
+import portfolioWork05 from "../asset/test/ibtikar.jpg";
+import portfolioWork06 from "../asset/test/innovpost.jpeg";
 
 const portfolioData = [
   {
@@ -55,6 +57,43 @@ const portfolioData = [
       "A modern student management system built with React, Tailwind CSS, Material UI, and Laravel. This application allows you to manage students, teachers, classrooms, subjects, and timetables effectively.",
     tech: ["React", "Tailwind css", "Laravel"],
     CodeSource: "https://github.com/AchrafLarbi/Studenty",
+  },
+  {
+    id: "05",
+    imgUrl: portfolioWork05,
+    title: "SafeRoad",
+    description:
+      "SafeRoad is an AI-powered traffic management solution that enhances urban mobility with smart infrastructure, a mobile app, and an admin dashboard. It features dynamic speed limits, intelligent traffic lights, real-time alerts, and interactive maps, ensuring safer and more efficient transportation.",
+    tech: [
+      "React",
+      "Tailwind css",
+      "Django",
+      "Python",
+      "SQLite",
+      "Deep Learning",
+      "Yoloo",
+      "MQTT Protocol",
+      "Tensorflow",
+      "OpenCV",
+    ],
+    CodeSource: "https://github.com/AchrafLarbi/SafeRoad",
+  },
+  {
+    id: "06",
+    imgUrl: portfolioWork06,
+    title: "Innovpost Hackathon",
+    description:
+      "Our Innovpost Hackathon solution enhances customer engagement for Algérie Poste with a mobile app, an AI-powered dashboard, and social media monitoring. It enables real-time feedback via QR codes, AI-driven sentiment analysis, and trend monitoring from Facebook and Twitter to improve service quality.",
+    tech: [
+      "React",
+      "Tailwind css",
+      "Django",
+      "Python",
+      "SQLite",
+      "Web Scraping",
+    ],
+    BackendCodeSource: "https://github.com/AchrafLarbi/InnvoPost",
+    FrontendCodeSource: "https://github.com/AchrafLarbi/InnovPost_Front",
   },
 ];
 

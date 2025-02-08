@@ -1,4 +1,6 @@
-import React, { useEffect } from "react";
+"use client";
+
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import HTML from "../asset/html.png";
@@ -13,60 +15,64 @@ import DjangoLogo from "../asset/djangorest.png";
 import PhpLogo from "../asset/php.png";
 import MySQLLogo from "../asset/mysql.png";
 import LaravelLogo from "../asset/laravel.png";
+import TensorFlowLogo from "../asset/tensorflow.png";
+import Kaggle from "../asset/Kaggle.png";
+import ScikitLearnLogo from "../asset/Scikit_Learn.png";
+import OpenCVLogo from "../asset/OpenCv.png";
 
 const Skills = () => {
   useEffect(() => {
     AOS.init();
   }, []);
 
-  return (
-    <div
-      name="skills"
-      className="w-full min-h-screen text-gray-300 bg-[#0a192f] font-sans pt-24 sm:pt-32 pb-16"
-    >
-      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-        <div>
-          <p className="text-4xl font-bold inline border-b-4 border-[#C23B22]">
-            Skills
-          </p>
-        </div>
+  const skills = [
+    { src: HTML, alt: "html icon", name: "HTML" },
+    { src: CSS, alt: "css icon", name: "CSS" },
+    { src: JavaScript, alt: "javascript icon", name: "JavaScript" },
+    { src: ReactLogo, alt: "react icon", name: "ReactJs" },
+    { src: GithubLogo, alt: "github icon", name: "Github" },
+    { src: TailwindLogo, alt: "tailwind icon", name: "Tailwind CSS" },
+    { src: NodeJsLogo, alt: "nodejs icon", name: "Node.js" },
+    { src: PythonLogo, alt: "python icon", name: "Python" },
+    { src: DjangoLogo, alt: "django icon", name: "Django REST Framework" },
+    { src: LaravelLogo, alt: "laravel icon", name: "Laravel" },
+    { src: MySQLLogo, alt: "mysql icon", name: "MySQL" },
+    { src: PhpLogo, alt: "php icon", name: "PHP" },
+    { src: TensorFlowLogo, alt: "tensorflow icon", name: "TensorFlow" },
+    { src: Kaggle, alt: "Kaggle icon", name: "Kaggle" },
+    { src: ScikitLearnLogo, alt: "scikit-learn icon", name: "Scikit-Learn" },
+    { src: OpenCVLogo, alt: "opencv icon", name: "OpenCV" },
+  ];
 
-        <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-center py-8 my-4">
-          {[
-            { src: HTML, alt: "html icon", name: "HTML" },
-            { src: CSS, alt: "css icon", name: "CSS" },
-            { src: JavaScript, alt: "javascript icon", name: "JavaScript" },
-            { src: ReactLogo, alt: "react icon", name: "ReactJs" },
-            { src: GithubLogo, alt: "github icon", name: "Github" },
-            { src: TailwindLogo, alt: "tailwind icon", name: "Tailwind CSS" },
-            { src: NodeJsLogo, alt: "nodejs icon", name: "Node.js" },
-            { src: PythonLogo, alt: "python icon", name: "Python" },
-            {
-              src: DjangoLogo,
-              alt: "django icon",
-              name: "Django REST Framework",
-            },
-            { src: LaravelLogo, alt: "laravel icon", name: "Laravel" },
-            { src: MySQLLogo, alt: "mysql icon", name: "MySQL" },
-            { src: PhpLogo, alt: "php icon", name: "PHP" },
-          ].map((skill, index) => (
+  return (
+    <section
+      id="skills"
+      className="w-full py-20 bg-[#0a192f] text-gray-300 font-sans"
+    >
+      <div className="max-w-[1000px] mx-auto px-4">
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 pb-2 inline-block border-b-4 border-[#C23B22]">
+          Skills
+        </h2>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+          {skills.map((skill, index) => (
             <div
               key={index}
-              className="shadow-2xl shadow-[#040c16] hover:scale-110 duration-300 rounded-md p-2"
+              className="shadow-2xl shadow-[#040c16] hover:scale-110 duration-300 rounded-md p-4"
+              data-aos="zoom-in-up"
+              data-aos-duration={1000 + index * 100}
             >
-              <div data-aos="zoom-in-up" data-aos-duration={1000 + index * 500}>
-                <img
-                  src={skill.src}
-                  className="w-16 h-16 mx-auto object-contain"
-                  alt={skill.alt}
-                />
-                <p className="my-2">{skill.name}</p>
-              </div>
+              <img
+                src={skill.src || "/placeholder.svg"}
+                className="w-16 h-16 mx-auto object-contain mb-4"
+                alt={skill.alt}
+              />
+              <p className="text-center">{skill.name}</p>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
