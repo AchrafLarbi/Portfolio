@@ -83,6 +83,13 @@ const ShowCard = ({ activeId, setShowCard }) => {
             </button>
           </a>
         )}
+        {portfolio.Link && (
+          <a target="_blank" rel="noreferrer" href={portfolio.Link}>
+            <button className="text-white bg-[#0a192f] hover:bg-[#53565a] py-2 px-4 my-4 rounded-[8px] text-[12px] sm:text-[14px] ease-in duration-200">
+              Live Link
+            </button>
+          </a>
+        )}
 
         <button
           onClick={() => setShowCard(false)}

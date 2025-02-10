@@ -4,6 +4,7 @@ import portfolioWork03 from "../asset/test/pizza3.PNG";
 import portfolioWork04 from "../asset/test/studenty.png";
 import portfolioWork05 from "../asset/test/ibtikar.jpg";
 import portfolioWork06 from "../asset/test/innovpost.jpeg";
+import portfolioWork07 from "../asset/test/Studio_houari.png";
 
 const portfolioData = [
   {
@@ -94,6 +95,15 @@ const portfolioData = [
     ],
     BackendCodeSource: "https://github.com/AchrafLarbi/InnvoPost",
     FrontendCodeSource: "https://github.com/AchrafLarbi/InnovPost_Front",
+  },
+  {
+    id: "07",
+    imgUrl: portfolioWork07,
+    title: "Studio Houari Wahrani",
+    description:
+      "I developed a professional photography portfolio for a client from Oran, Algeria, as part of a freelance project. The website features a clean, modern, and fully responsive design to showcase the client's work effectively. Built with a frontend-focused approach, it uses Supabase for database and authentication, ensuring a smooth and dynamic user experience. Additionally, I optimized the site for search engines to enhance visibility on Google. ",
+    tech: ["React", "Tailwind css", "Javascript", "Supabase"],
+    Link: "https://studiohouariwahrani.store/",
   },
 ];
 
