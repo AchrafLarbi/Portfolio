@@ -7,8 +7,45 @@ import portfolioWork06 from "../asset/test/innovpost.jpeg";
 import portfolioWork07 from "../asset/test/Studio_houari.png";
 import portfolioWork08 from "../asset/test/gamesooq.jpg";
 import portfolioWork09 from "../asset/test/SmartCity.png";
+import portfolioWork10 from "../asset/test/Book.png";
+import portfolioWork11 from "../asset/test/RAG.png";
 
 const portfolioData = [
+  {
+    id: "11",
+    imgUrl: portfolioWork11,
+    title: "RAG-chatbot",
+    description:
+      " Retrieval Augmented Generation (RAG) chatbot that allows you to ask questions about your documents. The application uses Google's Flan-T5 language model and the LangChain framework to provide accurate, document-grounded answers.",
+    tech: [
+      "Python",
+      "Transformers",
+      "LangChain",
+      "Gradio",
+      "LLMs",
+      "RAG",
+      "ChromaDB",
+      "T5",
+    ],
+    Link: "https://huggingface.co/spaces/achraf2203/RAG-Chatbot",
+  },
+  {
+    id: "10",
+    imgUrl: portfolioWork10,
+    title: "Book-Recommender",
+    description:
+      "A comprehensive semantic book recommendation system built with LLMs, featuring natural language search, emotion-based filtering, and an interactive web interface. Includes complete ML pipeline from data cleaning to deployment using Python, Transformers, LangChain, and Gradio. ",
+    tech: [
+      "Python",
+      "Transformers",
+      "LangChain",
+      "Gradio",
+      "LLMs",
+      "semantic search",
+      "sentiment analysis",
+    ],
+    Link: "https://huggingface.co/spaces/achraf2203/Book-recommonder",
+  },
   {
     id: "09",
     imgUrl: portfolioWork09,
