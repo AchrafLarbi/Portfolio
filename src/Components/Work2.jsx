@@ -11,10 +11,22 @@ const Work2 = () => {
   const [portfolios, setPortfolios] = useState(data);
   const [showCard, setShowCard] = useState(false);
   const [activeId, setActiveId] = useState(null);
+  const [activeFilter, setActiveFilter] = useState("all");
 
   useEffect(() => {
     AOS.init();
   }, []);
+
+  useEffect(() => {
+    if (activeFilter === "all") {
+      setPortfolios(data);
+    } else {
+      setPortfolios(
+        data.filter((portfolio) => portfolio.category === activeFilter)
+      );
+    }
+    setNextItems(6);
+  }, [activeFilter]);
 
   const handleLoadMore = () => {
     setNextItems((prev) => prev + 3);
@@ -35,6 +47,39 @@ const Work2 = () => {
           Work
         </h2>
         <p className="mb-8">Check out My Work</p>
+
+        <div className="mb-8 flex gap-3 flex-wrap">
+          <button
+            onClick={() => setActiveFilter("all")}
+            className={`py-2 px-4 rounded-lg transition-colors duration-300 ${
+              activeFilter === "all"
+                ? "bg-[#C23B22] text-white"
+                : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+            }`}
+          >
+            All
+          </button>
+          <button
+            onClick={() => setActiveFilter("Freelance")}
+            className={`py-2 px-4 rounded-lg transition-colors duration-300 ${
+              activeFilter === "Freelance"
+                ? "bg-[#C23B22] text-white"
+                : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+            }`}
+          >
+            Freelance
+          </button>
+          <button
+            onClick={() => setActiveFilter("AI")}
+            className={`py-2 px-4 rounded-lg transition-colors duration-300 ${
+              activeFilter === "AI"
+                ? "bg-[#C23B22] text-white"
+                : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+            }`}
+          >
+            AI
+          </button>
+        </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
           {portfolios.slice(0, nextItems).map((portfolio, index) => (

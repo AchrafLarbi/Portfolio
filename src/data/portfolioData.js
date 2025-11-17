@@ -9,8 +9,37 @@ import portfolioWork08 from "../asset/test/gamesooq.jpg";
 import portfolioWork09 from "../asset/test/SmartCity.png";
 import portfolioWork10 from "../asset/test/Book.png";
 import portfolioWork11 from "../asset/test/RAG.png";
+import portfolioWork12 from "../asset/test/harfan.png";
+import portfolioWork13 from "../asset/test/syra.png";
 
 const portfolioData = [
+  {
+    id: "13",
+    imgUrl: portfolioWork12,
+    title: "Harfan",
+    description:
+      "Harfan is an interactive educational platform that combines Arabic language learning and Quran memorization in a simple, engaging, and progressive manner. The platform is built with Django and uses SQLite for data storage. It also includes an admin section to manage content, users, and progress tracking efficiently.",
+    tech: ["Django", "Python", "SQLite", "React"],
+    Link: "https://harfan-pi.vercel.app/",
+    category: "Freelance",
+  },
+  {
+    id: "12",
+    imgUrl: portfolioWork13,
+    title: "Maison SYRA",
+    description:
+      "Full-stack e-commerce platform built with Django REST Framework and React. This project showcases a luxury artisan marketplace with features like secure authentication, PayPal integration, admin management, and responsive design.",
+    tech: [
+      "React",
+      "Tailwind css",
+      "Django",
+      "Python",
+      "Django REST Framework",
+      "PayPal",
+    ],
+    Link: "https://maisonsyra.vercel.app/",
+    category: "Freelance",
+  },
   {
     id: "11",
     imgUrl: portfolioWork11,
@@ -28,6 +57,7 @@ const portfolioData = [
       "T5",
     ],
     Link: "https://huggingface.co/spaces/achraf2203/RAG-Chatbot",
+    category: "AI",
   },
   {
     id: "10",
@@ -45,6 +75,7 @@ const portfolioData = [
       "sentiment analysis",
     ],
     Link: "https://huggingface.co/spaces/achraf2203/Book-recommonder",
+    category: "AI",
   },
   {
     id: "09",
@@ -62,6 +93,7 @@ const portfolioData = [
       "FastAPI",
     ],
     CodeSource: "https://github.com/AchrafLarbi/Project_2sc",
+    category: "AI",
   },
   {
     id: "08",
@@ -71,6 +103,7 @@ const portfolioData = [
       "Mobile app with landing page and admin dashboard that allows users to exchange video games securely, featuring real time chat, exchange tracking. All managed through a modern dashboard for monitoring user activity and app statistics.",
     tech: ["React", "Tailwind css", "Javascript", "firebase"],
     Link: "https://www.gamesooq.com/",
+    category: "Freelance",
   },
   {
     id: "07",
@@ -80,6 +113,7 @@ const portfolioData = [
       "I developed a professional photography portfolio for a client from Oran, Algeria, as part of a freelance project. The website features a clean, modern, and fully responsive design to showcase the client's work effectively. Built with a frontend-focused approach, it uses Supabase for database and authentication, ensuring a smooth and dynamic user experience. Additionally, I optimized the site for search engines to enhance visibility on Google. ",
     tech: ["React", "Tailwind css", "Javascript", "Supabase"],
     Link: "https://studiohouariwahrani.store/",
+    category: "Freelance",
   },
   {
     id: "06",
@@ -97,6 +131,7 @@ const portfolioData = [
     ],
     BackendCodeSource: "https://github.com/AchrafLarbi/InnvoPost",
     FrontendCodeSource: "https://github.com/AchrafLarbi/InnovPost_Front",
+    category: "AI",
   },
   {
     id: "05",
@@ -117,6 +152,7 @@ const portfolioData = [
       "OpenCV",
     ],
     CodeSource: "https://github.com/AchrafLarbi/SafeRoad",
+    category: "AI",
   },
   {
     id: "04",
@@ -126,6 +162,7 @@ const portfolioData = [
       "A modern student management system built with React, Tailwind CSS, Material UI, and Laravel. This application allows you to manage students, teachers, classrooms, subjects, and timetables effectively.",
     tech: ["React", "Tailwind css", "Laravel"],
     CodeSource: "https://github.com/AchrafLarbi/Studenty",
+    category: "Freelance",
   },
   {
     id: "03",
@@ -135,6 +172,7 @@ const portfolioData = [
       "responsive pizza ordering website implemented with HTML, CSS, and JavaScript. The website is designed to provide a seamless user experience across various devices, ensuring optimal usability and visual appeal.",
     tech: ["HTML", "CSS", "JavaScript"],
     CodeSource: "https://github.com/AchrafLarbi/pizza",
+    category: "Freelance",
   },
 
   {
@@ -152,6 +190,7 @@ const portfolioData = [
       "RESTful APIs",
     ],
     CodeSource: "https://github.com/AchrafLarbi/Stockkeep",
+    category: "Freelance",
   },
   {
     id: "01",
@@ -169,6 +208,7 @@ const portfolioData = [
     ],
     BackendCodeSource: "https://github.com/AchrafLarbi/Projet-2cp",
     FrontendCodeSource: "https://github.com/AchrafLarbi/Front_Project_2cp",
+    category: "Freelance",
   },
 ];
 
